@@ -1,7 +1,7 @@
 
 This contains everything you need to run your app locally.
 
-View your app in AI Studio: https://healthsync-ai-1083455318118.us-west1.run.app/
+View Website Through : https://healthsync-ai-1083455318118.us-west1.run.app/
 
 ## Run Locally
 
