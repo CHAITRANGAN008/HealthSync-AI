@@ -1,0 +1,8 @@
+{
+  "name": "HealthSync AI",
+  "description": "A comprehensive AI-powered health and wellness application featuring dashboards, AI coaching, and health tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

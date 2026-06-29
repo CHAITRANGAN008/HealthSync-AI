@@ -1,0 +1,202 @@
+{
+  "projectInfo": {
+    "authEnabled": true,
+    "authProviders": [
+      "anonymous",
+      "google.com"
+    ]
+  },
+  "collections": {
+    "waterLogs": {
+      "description": "User water intake logs",
+      "fields": {
+        "userId": "string",
+        "amount": "number",
+        "date": "string",
+        "time": "string",
+        "notes": "string",
+        "createdAt": "timestamp",
+        "updatedAt": "timestamp"
+      },
+      "rules": {
+        "read": "request.auth != null && request.auth.uid == resource.data.userId",
+        "create": "request.auth != null && request.auth.uid == request.resource.data.userId",
+        "update": "request.auth != null && request.auth.uid == resource.data.userId && request.resource.data.userId == resource.data.userId",
+        "delete": "request.auth != null && request.auth.uid == resource.data.userId"
+      }
+    },
+    "weightLogs": {
+      "description": "User weight logs",
+      "fields": {
+        "userId": "string",
+        "weight": "number",
+        "date": "string",
+        "notes": "string",
+        "createdAt": "timestamp",
+        "updatedAt": "timestamp"
+      },
+      "rules": {
+        "read": "request.auth != null && request.auth.uid == resource.data.userId",
+        "create": "request.auth != null && request.auth.uid == request.resource.data.userId",
+        "update": "request.auth != null && request.auth.uid == resource.data.userId",
+        "delete": "request.auth != null && request.auth.uid == resource.data.userId"
+      }
+    },
+    "bloodPressureLogs": {
+      "description": "User blood pressure logs",
+      "fields": {
+        "userId": "string",
+        "systolic": "number",
+        "diastolic": "number",
+        "pulse": "number",
+        "date": "string",
+        "time": "string",
+        "notes": "string",
+        "createdAt": "timestamp",
+        "updatedAt": "timestamp"
+      },
+      "rules": {
+        "read": "request.auth != null && request.auth.uid == resource.data.userId",
+        "create": "request.auth != null && request.auth.uid == request.resource.data.userId",
+        "update": "request.auth != null && request.auth.uid == resource.data.userId",
+        "delete": "request.auth != null && request.auth.uid == resource.data.userId"
+      }
+    },
+    "bloodSugarLogs": {
+      "description": "User blood sugar logs",
+      "fields": {
+        "userId": "string",
+        "glucoseLevel": "number",
+        "measurementType": "string",
+        "date": "string",
+        "time": "string",
+        "notes": "string",
+        "createdAt": "timestamp",
+        "updatedAt": "timestamp"
+      },
+      "rules": {
+        "read": "request.auth != null && request.auth.uid == resource.data.userId",
+        "create": "request.auth != null && request.auth.uid == request.resource.data.userId",
+        "update": "request.auth != null && request.auth.uid == resource.data.userId",
+        "delete": "request.auth != null && request.auth.uid == resource.data.userId"
+      }
+    },
+    "heartRateLogs": {
+      "description": "User heart rate logs",
+      "fields": {
+        "userId": "string",
+        "bpm": "number",
+        "measurementType": "string",
+        "date": "string",
+        "time": "string",
+        "notes": "string",
+        "createdAt": "timestamp",
+        "updatedAt": "timestamp"
+      },
+      "rules": {
+        "read": "request.auth != null && request.auth.uid == resource.data.userId",
+        "create": "request.auth != null && request.auth.uid == request.resource.data.userId",
+        "update": "request.auth != null && request.auth.uid == resource.data.userId",
+        "delete": "request.auth != null && request.auth.uid == resource.data.userId"
+      }
+    },
+    "oxygenLogs": {
+      "description": "User oxygen logs",
+      "fields": {
+        "userId": "string",
+        "spo2": "number",
+        "date": "string",
+        "time": "string",
+        "notes": "string",
+        "createdAt": "timestamp",
+        "updatedAt": "timestamp"
+      },
+      "rules": {
+        "read": "request.auth != null && request.auth.uid == resource.data.userId",
+        "create": "request.auth != null && request.auth.uid == request.resource.data.userId",
+        "update": "request.auth != null && request.auth.uid == resource.data.userId",
+        "delete": "request.auth != null && request.auth.uid == resource.data.userId"
+      }
+    },
+    "temperatureLogs": {
+      "description": "User temperature logs",
+      "fields": {
+        "userId": "string",
+        "temperature": "number",
+        "unit": "string",
+        "date": "string",
+        "time": "string",
+        "notes": "string",
+        "createdAt": "timestamp",
+        "updatedAt": "timestamp"
+      },
+      "rules": {
+        "read": "request.auth != null && request.auth.uid == resource.data.userId",
+        "create": "request.auth != null && request.auth.uid == request.resource.data.userId",
+        "update": "request.auth != null && request.auth.uid == resource.data.userId",
+        "delete": "request.auth != null && request.auth.uid == resource.data.userId"
+      }
+    },
+    "sleepLogs": {
+      "description": "User sleep logs",
+      "fields": {
+        "userId": "string",
+        "bedtime": "string",
+        "wakeupTime": "string",
+        "duration": "number",
+        "quality": "number",
+        "notes": "string",
+        "createdAt": "timestamp",
+        "updatedAt": "timestamp"
+      },
+      "rules": {
+        "read": "request.auth != null && request.auth.uid == resource.data.userId",
+        "create": "request.auth != null && request.auth.uid == request.resource.data.userId",
+        "update": "request.auth != null && request.auth.uid == resource.data.userId",
+        "delete": "request.auth != null && request.auth.uid == resource.data.userId"
+      }
+    },
+    "medicineLogs": {
+      "description": "User medicine logs",
+      "fields": {
+        "userId": "string",
+        "medicineName": "string",
+        "dosage": "string",
+        "frequency": "string",
+        "reminderTime": "string",
+        "notes": "string",
+        "createdAt": "timestamp",
+        "updatedAt": "timestamp"
+      },
+      "rules": {
+        "read": "request.auth != null && request.auth.uid == resource.data.userId",
+        "create": "request.auth != null && request.auth.uid == request.resource.data.userId",
+        "update": "request.auth != null && request.auth.uid == resource.data.userId",
+        "delete": "request.auth != null && request.auth.uid == resource.data.userId"
+      }
+    },
+    "nutritionLogs": {
+      "description": "User nutrition logs",
+      "fields": {
+        "userId": "string",
+        "mealName": "string",
+        "calories": "number",
+        "protein": "number",
+        "carbs": "number",
+        "fat": "number",
+        "fiber": "number",
+        "vitamins": "string",
+        "mealTime": "string",
+        "notes": "string",
+        "createdAt": "timestamp",
+        "updatedAt": "timestamp"
+      },
+      "rules": {
+        "read": "request.auth != null && request.auth.uid == resource.data.userId",
+        "create": "request.auth != null && request.auth.uid == request.resource.data.userId",
+        "update": "request.auth != null && request.auth.uid == resource.data.userId",
+        "delete": "request.auth != null && request.auth.uid == resource.data.userId"
+      }
+    }
+  }
+}
